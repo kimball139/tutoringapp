@@ -16,7 +16,7 @@
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
   'styles/normalize.css',
-  'styles/**/*.css'
+  'styles/*.css'
 ];
 
 
@@ -29,17 +29,23 @@ var jsFilesToInject = [
 
   // Dependencies like jQuery, or Angular are brought in here
   'js/dependencies/angular.1.3.js',
-  'js/dependencies/modernizr.js',
   'js/dependencies/jquery.js',
   'js/dependencies/fastclick.js',
-  'js/dependencies/**/*.js',
+  'js/dependencies/*.js',
 
   // All of the rest of your client-side js files
   // will be injected here in no particular order.
   'js/public/signup/SignupModule.js',
   'js/private/dashboard/DashboardModule.js',
   'js/public/homepage/HomepageModule.js',
-  'js/**/*.js'
+  'js/private/classroomlogin/ClassroomLoginModule.js',
+  'js/private/classroom/ClassroomModule.js',
+  'js/private/classroom/ClassroomController.js',
+  'js/private/classroomlogin/ClassroomLoginController.js',
+  'js/private/dashboard/DashboardController.js',
+  'js/public/homepage/HomepageController.js',
+  'js/public/signup/SignupController.js'
+  //'js/**/*.js'
 ];
 
 

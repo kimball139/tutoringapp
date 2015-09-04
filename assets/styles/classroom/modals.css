@@ -1,0 +1,162 @@
+/* MODALS */
+
+#pr2_modal_background {
+    position: absolute;
+    left: 0;
+    top:0;
+    bottom: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    display: none;
+    z-index: 3000;
+}
+
+#pr2_help_modal_close {
+    position: absolute;
+    z-index: 3002;
+    width: 28px;
+    cursor: pointer;
+    height: 28px;
+    top: 28px;
+    background: url('/whiteboard/icons/pr2_sprite.png') -532px 0;
+    left: 50%;
+    display: none;
+    margin-left: 300px;
+}
+
+#pr2_help_modal_close:hover {
+    opacity: 0.7;
+}
+
+#pr2_help_modal {
+    position: absolute;
+    background: linear-gradient(to bottom, #cdeb8e 0%, #a5c956 100%);
+    border: solid #cdeb8e 1px;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: left;
+    color: #29441e;
+    overflow-y: auto;
+    height: calc(100% - 60px);
+    display: none;
+    z-index: 3001;
+}
+
+#pr2_help_modal p {
+    margin: 0 0 10px 0;
+}
+
+#pr2_help_modal h1 {
+    font-size: 18px;
+    margin: 15px 0 0 0;
+}
+
+#pr2_help_modal h2 {
+    font-size: 16px;
+    margin: 15px 0 0 0;
+}
+
+#pr2_help_modal h3 {
+    font-size: 14px;
+    margin: 15px 0 0 0;
+}
+
+#pr2_help_modal ul, #pr2_help_modal ol {
+    margin: 0;
+}
+
+#pr2_help_modal .contents a {
+    color: black;
+}
+
+#pr2_help_modal .up {
+    color: black;
+    display: block;
+    text-align: right;
+}
+
+#pr2_help_modal img {
+    float: left;
+    vertical-align: text-top;
+    margin: 5px 5px 5px 0;
+}
+
+#pr2_help_modal notice {
+    background-color: white;
+    display: block;
+    padding: 5px;
+    margin: 15px 0 15px 0;
+    border-radius: 5px;
+    border: solid #29441E 1px;
+}
+
+#pr2_help_modal notice:before	{
+    content:"Important: ";
+    font-weight: bold;
+}
+
+#pr2_help_modal tip {
+    background-color: #ffff99;
+    display: block;
+    padding: 5px;
+    margin: 15px 0 15px 0;
+    border-radius: 5px;
+    border: solid #ffcc00 1px;
+}
+
+#pr2_help_modal tip:before	{
+    content:"Tip: ";
+    font-weight: bold;
+}
+
+#pr2_info_message {
+    font-size: 16px;
+}
+
+#pr2_alert_message {
+    font-size: 16px;
+    margin-bottom: 30px;
+
+}
+
+#pr2_confirm_modal, #pr2_info_modal, #pr2_alert_modal {
+    position: absolute;
+    z-index: 3001;
+    background: linear-gradient(to bottom, #cdeb8e 0%, #a5c956 100%);
+    border: solid #cdeb8e 1px;
+    border-radius: 3px;
+    width: 400px;
+    min-height: 90px;
+    margin-left:-200px;
+    left:50%;
+    margin-top: 150px;
+    display: none;
+    color: #29441e;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 1px 1px #FFFFFF;
+}
+
+
+#pr2_confirm_modal > button, #pr2_info_modal > button {
+    margin: 5px;
+    font-size: 14px;
+    text-shadow: 1px 1px #FFFFFF;
+}
+
+#pr2_confirm_question {
+    height: 80px;
+    font-size: 16px;
+    text-align: left;
+}

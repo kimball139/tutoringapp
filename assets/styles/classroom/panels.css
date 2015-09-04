@@ -1,0 +1,165 @@
+
+.pr2_panel_wrapper {
+    background: linear-gradient(to bottom, #cdeb8e 0%, #a5c956 100%);
+    position: fixed;
+    border-radius: 4px;
+    font: 12px "Segoe UI",Optima,Arial,sans-serif;
+    border: solid #628558 1px;
+    box-shadow: 1px 1px 5px #000;
+    color: 	#375B28;
+    z-index:  3;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    min-height: 18px;
+}
+
+.pr2_panel_wrapper>div:last-child {
+    padding: 3px;
+
+}
+
+.pr2_panel_wrapper>div:first-child {
+    width: calc(100% - 5px);
+    height: 16px;
+    background-color: #628558;
+    cursor: move;
+    color : #D8EEA6;
+    padding-left: 5px;
+    padding-top: 2px;
+    font-size: 11px;
+    font-weight: bold;
+}
+.pr2_panel_bar_title {
+    display: inline-block;
+    width: calc(100% - 28px);
+    float: left;
+}
+.pr2_panel_bar_toggle {
+    background: url('/whiteboard/icons/pr2_sprite.png') no-repeat -28px -56px;
+    cursor: pointer;
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    margin-right: -3px;
+}
+
+.pr2_panel_block {
+    width: 100%;
+}
+
+.pr2_panel_wrapper label {
+    display: inline-block;
+    padding-left: 5px;
+    padding-top: 7px;
+    width: 16px;
+    vertical-align: top;
+}
+
+.pr2_panel_wrapper input {
+    width: 30px;
+    font-size: 11px;
+    background-color: #C2E37C;
+    border: solid #375B28 1px;
+    margin: 5px 2px 2px;
+    display: inline-block;
+}
+
+.pr2_panel_wrapper button {
+    background: linear-gradient(to bottom, rgb(205, 235, 142) 0%, rgb(165, 201, 86) 100%) repeat scroll 0 0 transparent;
+    border: 1px solid rgb(147, 188, 61);
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    margin: 2px;
+    letter-spacing: 0;
+    padding: 2px 4px 2px 4px;
+    color: #375B28;
+    display: inline-block;
+    font: 12px "Segoe UI",Optima,Arial,sans-serif;
+    outline: none;
+}
+.pr2_panel_wrapper  button::-moz-focus-inner {
+    padding: 0;
+}
+
+.pr2_panel_hspacer {
+    margin: 5px 5px 0 5px;
+    border-top: solid #D5EDA3 1px;
+    border-bottom: solid #99C442 1px;
+}
+
+.pr2_panel_header {
+    width: 100%;
+    padding: 5px;
+    font-size: 11px;
+    font-style: italic;
+    cursor: default;
+}
+
+.pr2_panel_ibutton, .pr2_panel_group_button, .pr2_panel_toggle {
+    display: inline-block;
+    background: url('/whiteboard/icons/pr2_sprite.png') no-repeat;
+    height: 28px;
+    width: 28px;
+    margin: 0 0 0 4px;
+    border: solid transparent 1px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pr2_panel_crop_button {
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+
+.pr2_panel_button_selected {
+    background-color: #cdeb8e;
+    border-color: #80A435;
+}
+
+.pr2_panel_group {
+    display: inline-block;
+    padding-bottom: -20px;
+}
+
+.pr2_panel_menu {
+    font-size: 11px;
+    width: 120px;
+    margin: 6px 2px 2px 0;
+    background-color: #C2E37C;
+    border: solid #375B28 1px;
+}
+
+.pr2_panel_ibutton:hover, .pr2_panel_group_button:hover, .pr2_panel_toggle:hover{
+    border: solid #93BC3D 1px;
+}
+
+.pr2_panel_ibutton:active, .pr2_panel_group_button:active, .pr2_panel_toggle:active{
+    border: solid #4F8239 1px;
+}
+
+
+#pr2_panel_pr2_image_editor_panel button {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pr2_panel_menu_picker_item {
+    display: inline-block;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    border: solid transparent 1px;
+    background: no-repeat center;
+    margin: 0 2px 0 2px;
+    border-radius: 4px;
+}
+
+.pr2_panel_menu_picker_item:hover {
+    border: solid #93BC3D 1px;
+}
+
+.pr2_panel_menu_picker_item_selected {
+    background-color: #cdeb8e;
+    border-color: #80A435;
+}

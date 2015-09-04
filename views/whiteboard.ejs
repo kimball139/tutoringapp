@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<head>
+<title>Classroom</title>
+	
+	<!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!--STYLES-->
+	<link rel="stylesheet" href="/styles/normalize.css">
+	<link rel="stylesheet" href="/styles/angular-toastr.css">
+	<link rel="stylesheet" href="/styles/foundation.css">
+	<link rel="stylesheet" href="/styles/importer.css">
+	<!--STYLES END-->
+	<link rel="stylesheet" href="/styles/classroom/elements.css">
+	<link rel="stylesheet" href="/styles/classroom/panels.css">
+	<link rel="stylesheet" href="/styles/classroom/modals.css">
+	<link rel="stylesheet" href="/styles/classroom/toolbar.css">
+	<link rel="stylesheet" href="/styles/classroom/chatbox.css">
+	<link rel="stylesheet" href="/styles/classroom/camplayer.css">
+	<link rel="stylesheet" href="/styles/classroom/whiteboard.css">
+	<link rel="stylesheet" href="/styles/classroom/emoticons.css">
+	<link rel="stylesheet" href="/styles/classroom/image_editor.css">
+	<link rel="stylesheet" href="/styles/classroom/text_editor.css">
+
+
+	<!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+    <script type="text/javascript">
+    window.SAILS_LOCALS = {
+      _csrf: '<%= _csrf %>',
+      me: <%- JSON.stringify(me) %>
+    };
+    </script>
+
+
+</head>
+<body>
+
+	<!--SCRIPTS-->
+	<script src="/js/dependencies/sails.io.js"></script>
+	<script src="/js/dependencies/angular.1.3.js"></script>
+	<script src="/js/dependencies/jquery.js"></script>
+	<script src="/js/dependencies/fastclick.js"></script>
+	<script src="/js/dependencies/angular-toastr.js"></script>
+	<script src="/js/dependencies/compareTo.module.js"></script>
+	<script src="/js/dependencies/foundation.min.js"></script>
+	<script src="/js/public/signup/SignupModule.js"></script>
+	<script src="/js/private/dashboard/DashboardModule.js"></script>
+	<script src="/js/public/homepage/HomepageModule.js"></script>
+	<script src="/js/private/classroomlogin/ClassroomLoginModule.js"></script>
+	<script src="/js/private/classroom/ClassroomModule.js"></script>
+	<script src="/js/private/classroom/ClassroomController.js"></script>
+	<script src="/js/private/classroomlogin/ClassroomLoginController.js"></script>
+	<script src="/js/private/dashboard/DashboardController.js"></script>
+	<script src="/js/public/homepage/HomepageController.js"></script>
+	<script src="/js/public/signup/SignupController.js"></script>
+	<!--SCRIPTS END-->
+	<script src="/js/dependencies/classroom/Node_IO_Socket.js"></script>
+	<script src="/js/dependencies/classroom/PR2.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/utils.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/utils.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/camplayer.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/chatbox.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/download.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/filepicker.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/fullscreen.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/modals.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/panels.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/peer.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/shapes.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/shortcuts.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/toolbar.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/upload.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/user.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/whiteboard.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/whiteboard/image_editor.js"></script>
+	<script src="/js/dependencies/classroom/PR2_modules/whiteboard/text_editor.js"></script>
+	<script src="/js/dependencies/classroom/setup.js"></script>
+
+</body>
+</html>

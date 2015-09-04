@@ -1,0 +1,142 @@
+
+#pr2_player_container {
+    position:fixed;
+    padding: 0;
+    margin:0;
+    height: 400px;
+    right: 2px;
+    left: 800px;
+    z-index: 500;
+    background-color: #eaffea;
+    top: 45px;
+}
+
+.pr2_player {
+    position: absolute;
+    background-color: black;
+}
+
+#pr2_remote_player {
+    z-index: 1;
+    right: 0;
+    width: calc(100% - 4px);
+    height: 302px;
+    border: solid #93BC3D 1px;
+}
+
+#pr2_local_player {
+    z-index: 2;
+    right: 0;
+    height: 90px;
+    width: 120px;
+    margin: 4px;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+#pr2_player_container:-webkit-full-screen {
+    height: 100% !important;
+    width: 100% !important;
+    top:0 !important;
+    left:0 !important;
+    position: absolute;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+#pr2_player_container:-webkit-full-screen #pr2_remote_player {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 0;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+#pr2_player_container:-moz-full-screen {
+    height: 100% !important;
+    width: 100% !important;
+    top:0 !important;
+    left:0 !important;
+    position: absolute;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+#pr2_player_container:-moz-full-screen #pr2_remote_player {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border: 0;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+#pr2_player_container:-moz-full-screen #pr2_cam_controls {
+    display: none;
+}
+
+/*noinspection CssInvalidPseudoSelector*/
+#pr2_player_container:-webkit-full-screen #pr2_cam_controls {
+    display: none;
+}
+
+#pr2_cam_button {
+    background: url('/whiteboard/icons/pr2_sprite.png') -420px 0;
+    height:28px;
+    width: 28px;
+    display: inline-block;
+    cursor : pointer;
+    border: solid transparent 1px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+#pr2_cam_button:hover, #pr2_fullscreen_button:hover {
+    border: solid black 1px;
+}
+
+.pr2_active_cam_button {
+    background-position: -448px 0 !important;
+}
+
+#pr2_fullscreen_button {
+    background: url('/whiteboard/icons/pr2_sprite.png') -392px 0;
+    height:28px;
+    width: 28px;
+    display: inline-block;
+    cursor : pointer;
+    border: solid transparent 1px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+#pr2_cam_controls {
+    background-color: white;
+    opacity: 0.2;
+    display: block;
+    z-index: 500;
+    width:34px;
+    color: black;
+    position: relative;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#pr2_cam_controls:hover {
+    opacity: 0.3;
+}
+
+#pr2_player_button {
+    background-position: -420px 0;
+    margin-left: 180px;
+}
+
+
+.pr2_active_player_button {
+    background-position: -448px 0 !important;
+}
+
+#pr2_fullscreen_button {
+    background-position: -392px 0;
+}

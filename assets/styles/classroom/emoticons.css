@@ -1,0 +1,26 @@
+/* EMOTICONS */
+
+.pr2_emo {
+    background: url('/whiteboard/icons/pr2_emoticon_sprite.png') no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    vertical-align: top;
+
+}
+
+.pr2_emo_nerd {
+    background-position: 0 0;
+}
+
+.pr2_emo_smile {
+    background-position: -20px 0;
+}
+
+.pr2_emo_wink {
+    background-position: -160px -20px;
+}
+
+.pr2_emo_think {
+    background-position: -100px 0;
+}

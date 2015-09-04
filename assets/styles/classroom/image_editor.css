@@ -1,0 +1,64 @@
+
+#pr2_image_editor_canvas {
+    position: fixed;
+    z-index: 101;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#pr2_image_editor_wrapper {
+    position: fixed;
+    border: solid #3399FF 1px;
+    z-index: 105;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none
+}
+#pr2_image_editor_wrapper:focus {
+    border-color: #ff0000;
+    outline: 0;
+}
+
+#pr2_image_editor_wrapper:focus>div {
+    background-color: #ff0000 !important;
+}
+
+#pr2_image_editor_wrapper>div[id^=pr2_image_editor_handle] {
+    height: 5px;
+    position: absolute;
+    width: 5px;
+    z-index: 110;
+    background-color: #3399FF;
+}
+
+#pr2_image_editor_handle_nw {
+    cursor: nw-resize;
+    left: 0;
+    top: 0;
+}
+
+#pr2_image_editor_handle_ne {
+    cursor: ne-resize;
+    right: 0;
+    top: 0;
+}
+
+#pr2_image_editor_handle_sw {
+    cursor: sw-resize;
+    left: 0;
+    bottom: 0;
+}
+
+#pr2_image_editor_handle_se {
+    cursor: se-resize;
+    right: 0;
+    bottom: 0;
+}
+
+#pr2_image_editor_croplines {
+    position:  absolute;
+    border: solid transparent 1px;
+    z-index: 115;
+    border-image: url('/whiteboard/icons/block_border.png') 1   round;
+}

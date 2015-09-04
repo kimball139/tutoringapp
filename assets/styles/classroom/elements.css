@@ -1,0 +1,86 @@
+/* Elements */
+body, html {
+    position: fixed;
+    font-family:  Arial, sans-serif;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+
+}
+
+body:-webkit-full-screen {
+    height: 100% !important;
+    width: 100% !important;
+    top:0 !important;
+    left:0 !important;
+    position: fixed;
+}
+
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+progress {
+    width: 100px;
+    height: 5px;
+}
+
+button {
+    background: linear-gradient(to bottom, #cdeb8e 0%, #a5c956 100%);
+    border: solid #93BC3D 1px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    border: solid #93BC3D 1px;
+}
+
+textarea {
+    outline: 0;
+}
+
+select {
+    background : transparent;
+    margin: 4px;
+    vertical-align: 10px;
+    width: calc(100% + 17px);
+    border-width: 0;
+    color: #375B28;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+input[type=text] {
+    width: 30px;
+    font-size: 12px;
+    margin: 2px;
+    background-color: #C2E37C;
+    border: solid #375B28 1px;
+}
+
+select:focus {
+    outline: 0;
+}
+
+option {
+    background-color: #C2E37C;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.hr {
+    margin: 3px 5px 3px 5px;
+    border-top: solid #D5EDA3 1px;
+    border-bottom: solid #99C442 1px;
+}

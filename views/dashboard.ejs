@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sign Up for Tutoring App</title>
+    <title>Dashboard</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -47,6 +47,7 @@
             fires.  If it's not there (which it wouldn't be in the case of ng-if) then the scope of the signup
             controller will not be tied to this element. -->
             <li>
+              <a href="/tutor_signin">Join the Classroom</a>
               <a href="/logout">sign-out</a>
             </li>
             <!-- <a ng-controller="signinController" class="btn btn-default navbar-btn navbar-right" href="#" ng-if="!isAuthenticated">sign-in</a> -->
@@ -63,7 +64,6 @@
   	<!--SCRIPTS-->
 	  <script src="/js/dependencies/sails.io.js"></script>
 	  <script src="/js/dependencies/angular.1.3.js"></script>
-	  <script src="/js/dependencies/modernizr.js"></script>
 	  <script src="/js/dependencies/jquery.js"></script>
 	  <script src="/js/dependencies/fastclick.js"></script>
 	  <script src="/js/dependencies/angular-toastr.js"></script>
@@ -72,10 +72,15 @@
 	  <script src="/js/public/signup/SignupModule.js"></script>
 	  <script src="/js/private/dashboard/DashboardModule.js"></script>
 	  <script src="/js/public/homepage/HomepageModule.js"></script>
+	  <script src="/js/private/classroomlogin/ClassroomLoginModule.js"></script>
+	  <script src="/js/private/classroom/ClassroomModule.js"></script>
+	  <script src="/js/private/classroom/ClassroomController.js"></script>
+	  <script src="/js/private/classroomlogin/ClassroomLoginController.js"></script>
 	  <script src="/js/private/dashboard/DashboardController.js"></script>
 	  <script src="/js/public/homepage/HomepageController.js"></script>
 	  <script src="/js/public/signup/SignupController.js"></script>
 	  <!--SCRIPTS END-->
+    <script src="/js/dependencies/modernizr/modernizr.js"></script>
   </body>
  </html>
 

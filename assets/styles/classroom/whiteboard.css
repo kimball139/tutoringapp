@@ -1,0 +1,87 @@
+
+.pr2_canvas {
+	position: fixed;
+	left: 1px;
+	top:40px;
+	border: solid #93BC3D 1px;
+}
+
+#pr2_canvas {
+	z-index: 0;
+	background-color: white;
+}
+
+#pr2_temp_canvas {
+	z-index: 50;
+}
+
+#pr2_remote_pointer {
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 200;
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+
+#pr2_pattern_pointer {
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 200;
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.pr2_canvas_border_layers {
+	background-color: #eaffea;
+	z-index: 300;
+	position: fixed;
+    overflow: hidden;
+}
+
+#pr2_top_layer {
+	top: 0;
+	left: 0;
+	right: 0;
+    border-bottom: solid #93BC3D 1px;
+}
+
+#pr2_bottom_layer {
+	left: 0;
+	right: 0;
+	bottom: 0;
+    border-top: solid #93BC3D 1px;
+}
+
+#pr2_left_layer {
+	left: 0;
+	top: 0;
+	bottom: 0;
+    border-right: solid #93BC3D 1px;
+}
+
+#pr2_right_layer {
+	right: 0;
+	top: 0;
+	bottom: 0;
+    border-left: solid #93BC3D 1px;
+}
+
+#pr2_horizontal_helper {
+	position: absolute;
+	display: none;
+    background: url('/whiteboard/icons/horizontal_helper.png') repeat-x;
+    height: 1px;
+	z-index: 200;
+	pointer-events: none;
+}
+
+#pr2_vertical_helper {
+	position: absolute;
+	display: none;
+    background: url('/whiteboard/icons/vertical_helper.png') repeat-y;
+    width: 1px;
+	z-index : 200;
+	pointer-events: none;
+}

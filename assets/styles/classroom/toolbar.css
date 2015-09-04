@@ -1,0 +1,311 @@
+
+#pr2_toolbar {
+    background: linear-gradient(to bottom, #cdeb8e 0%, #a5c956 100%);
+    position: fixed;
+    margin-top: -6px;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    box-shadow: 1px 1px 5px #000;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+#pr2_start_button {
+    background-image: url('/whiteboard/icons/pr2-home-button.png');
+    width: 39px;
+    height: 39px;
+    display: inline-block;
+    margin: 7px 1px -7px ;
+    cursor: pointer;
+    z-index: 100;
+}
+
+
+.pr2_select_wrapper {
+    background: #CDEB8E url("/whiteboard/icons/select-arrow.png") no-repeat right center;
+    height: 28px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left:12px;
+    display:inline-block;
+    border: solid #80A435 1px;
+    border-radius: 3px;
+}
+
+.pr2_select_wrapper:hover {
+    border: solid #93BC3D 1px;
+}
+
+
+
+
+#pr2_start_button:hover {
+    box-shadow: 3px -2px 3px #fff;
+}
+
+#pr2_start_menu {
+    position: absolute;
+    z-index: 40;
+    left: 10px;
+    list-style: none;
+    border: solid #93BC3D 1px;
+    margin: 0;
+    padding-left:0;
+    font-size: 13px;
+    text-shadow: 1px 1px 2px #EEEEEE;
+    color: #375B28;
+    box-shadow: 1px 1px 2px #000;
+    cursor: pointer;
+    background-color: #A5C956;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+
+}
+#pr2_start_menu li {
+    display: block;
+    height: 18px;
+    min-width: 150px;
+    padding: 3px 5px 3px 5px;
+
+}
+
+#pr2_start_menu li:hover {
+    background-color:#B6D76E;
+}
+
+
+#pr2_start_menu ul {
+    list-style: none;
+    background-color: #A5C956;
+    text-shadow: 1px 1px 2px #EEEEEE;
+    color: #375B28;
+    box-shadow: 1px 1px 2px #000;
+    position: absolute;
+    left: 160px;
+    margin-left:0;
+    margin-top: -25px;
+    padding-left:0;
+}
+#pr2_start_menu >li > ul {
+    transition-property: visibility;
+    transition-delay: 250ms;
+    visibility: hidden;
+}
+
+#pr2_start_menu >li:hover > ul {
+    visibility: visible;
+}
+
+.pr2_startmenu_menu {
+    background: url('/whiteboard/icons/menu-arrow.png') no-repeat right 4px;
+}
+
+
+.pr2_tool_button {
+    display: inline-block;
+    background: url('/whiteboard/icons/pr2_sprite.png') no-repeat;
+    height: 28px;
+    width: 28px;
+    margin: 0 0 0 10px;
+    border: solid transparent 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.pr2_tool_button:hover, .pr2_toolbar_picker_button:hover{
+    border: solid #93BC3D 1px;
+}
+
+.pr2_tool_button:active, .pr2_toolbar_picker_button:active {
+    border: solid #4F8239 1px;
+}
+
+.pr2_tool_button_disabled {
+    opacity: 0.5;
+    border: solid transparent 1px;
+    cursor: default;
+}
+.pr2_tool_button_disabled:hover {
+    opacity: 0.5;
+    border: solid transparent 1px;
+}
+.pr2_tool_button_disabled:active {
+    opacity: 0.5;
+    border: solid transparent 1px;
+}
+
+.pr2_tool_button_selected {
+    background-color: #cdeb8e;
+    border-color: #80A435;
+}
+
+.pr2_spacer {
+    height:28px;
+    margin:0 2px 0 10px;
+    padding-left: 1px;
+    border-left: solid #D5EDA3 1px;
+    border-right: solid #99C442 1px;
+    display: inline-block;
+}
+
+.pr2_toolbar_picker {
+    box-shadow: 1px 1px 5px #000;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #a5c956;
+    border: solid #93BC3D 1px;
+    border-top-width:  0;
+    position: absolute;
+    z-index: 4;
+}
+
+.pr2_picker_button, .pr2_toolbar_picker_button  {
+    display: inline-block;
+    height: 28px;
+    width: 28px;
+    margin: 0 0 0 10px;
+    border: solid transparent 1px;
+    background-repeat: no-repeat;
+    background-clip: padding-box !important;
+    border-radius: 4px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+.pr2_picker_button:active {
+    border: solid #4F8239 1px;
+}
+
+.pr2_picker_button:hover {
+    border: solid #93BC3D 1px;
+}
+
+.pr2_image_icon {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background: url('/whiteboard/icons/pr2_sprite.png') no-repeat;
+    margin-left: 8px;
+    margin-right: -3px;
+}
+
+#pr2_fillcolor_icon {
+    background-position: -280px -28px;
+}
+
+#pr2_background_icon {
+    background-position: -308px -28px;
+}
+
+#pr2_select_color_button, #pr2_select_fillcolor_button {
+    width: 24px;
+    height: 24px;
+    margin: 2px 2px 2px 8px;
+}
+
+
+#pr2_select_color_button + .pr2_toolbar_picker, #pr2_select_fillcolor_button + .pr2_toolbar_picker {
+    width: 123px;
+    min-height: 40px;
+    padding-top : 2px;
+}
+
+#pr2_select_color_button + .pr2_toolbar_picker > span, #pr2_select_fillcolor_button + .pr2_toolbar_picker  > span {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-top: 2px;
+    margin-left: 2px;
+    border: solid #AECF6B 1px;
+}
+
+#pr2_select_color_button + .pr2_toolbar_picker > span:hover, #pr2_select_fillcolor_button + .pr2_toolbar_picker > span:hover  {
+    border: solid #93BC3D 1px;
+}
+
+#pr2_select_color_button + .pr2_toolbar_picker > span:active, #pr2_select_fillcolor_button + .pr2_toolbar_picker > span:active  {
+    border: solid #4F8239 1px;
+}
+
+#pr2_select_linewidth_picker {
+    width: 30px;
+    min-height: 40px;
+}
+
+#pr2_select_linewidth_button + .pr2_toolbar_picker > span {
+    display: inline-block;
+    background: url('/whiteboard/icons/black_line.png') 2px 4px no-repeat;
+    height: 22px;
+    padding: 1px;
+    width: 22px;
+    margin-left: 2px;
+    border-radius: 2px;
+}
+
+
+.pr2_toolbar_label {
+    display: inline-block;
+    font-size: 11px;
+    color: #4F8239;
+    vertical-align: 10px;
+    padding-left: 10px;
+}
+
+#pr2_select_bg_button {
+    background: repeat 0 -4px;
+}
+
+#pr2_select_bg_button + .pr2_toolbar_picker {
+    padding: 10px;
+    width: 430px;
+    min-height: 100px;
+}
+
+#pr2_select_bg_button + .pr2_toolbar_picker > span {
+    display: inline-block;
+    background-repeat: repeat;
+    margin-right: 10px;
+    margin-top: 5px;
+    height: 64px;
+    width: 64px;
+}
+
+#pr2_select_shape_button {
+    background-image: url('/whiteboard/icons/pr2_sprite.png');
+}
+
+
+#pr2_select_shape_button + .pr2_toolbar_picker {
+    width: 212px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#pr2_select_shape_button + .pr2_toolbar_picker > span {
+    background: url('/whiteboard/icons/pr2_sprite.png') no-repeat;
+}
+
+.pr2_picker_link {
+    display: block;
+    width: 100%;
+    padding-top: 3px;
+    color: #375B28;
+    text-decoration: underline;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.pr2_picker_link:hover {
+    color: black;
+}

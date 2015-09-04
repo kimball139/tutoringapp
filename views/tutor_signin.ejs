@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<head>
+<title>Classroom Signin</title>
+	
+	<!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!--STYLES-->
+	<link rel="stylesheet" href="/styles/normalize.css">
+	<link rel="stylesheet" href="/styles/angular-toastr.css">
+	<link rel="stylesheet" href="/styles/foundation.css">
+	<link rel="stylesheet" href="/styles/importer.css">
+	<!--STYLES END-->
+	<link rel="stylesheet" href="/styles/classroom/classroom_login.css">
+
+	<!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+    <script type="text/javascript">
+    window.SAILS_LOCALS = {
+      _csrf: '<%= _csrf %>',
+      me: <%- JSON.stringify(me) %>
+    };
+    </script>
+
+
+</head>
+<body ng-app="ClassroomLoginModule" ng-controller="ClassroomLoginController" ng-cloak>
+ 
+<div class="main-body" id="a">
+
+	<h2>PeerSquared</h2>
+	<p>
+		PeerSquared is a <b>free and easy to use</b> education tool for one-on-one online teaching. It includes a <b>whiteboard</b>, <b>webcam & text chat</b>, and a function for <b>file exchange</b>. 
+	</p>
+
+
+	<div id="login_wrap">
+		<div>
+		<p>
+			 Fill out a unique room name (e.g. the teacher's mail address) and choose your login level. Note that teacher and student must use the <b>same</b> room name.  
+		</p>
+		<div style="height:0; border-top: 1px solid #b1b1b1; border-bottom: 1px solid white; margin-bottom: 10px"></div>
+		<span id="version_note" style="color:#cc0000; font-size:13px; margin-left: 110px">
+			 <b>Important:</b> it is recommened that you update to your latest version of your web browser, otherwise the program might not work properly.
+		</span>
+		<p>	 
+			 <label>Room Name</label><input type="text" size="17" id="room_name"  style="width:136px"> <span style="color:#333; font-size: 12px"> &nbsp;
+			 <i>(at least 6 characters)</i></span><br />
+			 <label>Login as</label>
+				<input type="radio" name="position" id="teacher" value="teacher" style="display:none"><label class="radio_label" for="teacher">Teacher</label> 
+				<input type="radio" name="position" id="student" value="student" style="display:none"><label class="radio_label" for="student">Student</label> <br />
+ 
+			 <p style="text-align:center;padding:5px; margin-top: 15px">
+				<button id="login_button" style="width:144px; margin-left: -70px">Start</button>
+			 </p>	
+			 <div style="height:0; border-top: 1px solid #b1b1b1; border-bottom: 1px solid white; margin-bottom: 20px"></div>
+			 <p style="margin-left: 140px; width: 400px; font-size:13px; display:none">
+				<i>
+					- Do you want custom functionality? <a href="contact.php?mode=request">Send a request</a>. <br />
+					- Experiencing technical problems? <a href="contact.php?mode=problem">Report</a> it. <br />
+					- Your <a href="contact.php?mode=feedback">feedback</a> is appreciated. </i>
+			 </p>
+		</p>
+		</div>
+		<div id="maintanance_wrap" style="display:none">
+			Currently the server is being updated, so PeerSquared cannot be used right now. Sorry for the inconvenience. 
+		</div>
+	 
+	 
+	</div>
+
+	<div id="browser_note">
+		<h2>Sorry...</h2>
+		<p>
+			Your browser doesn't work yet with PeerSquared. 
+			Please download one of these web browsers to start using it:
+			<p style="width:100%; text-align:center">
+				<a href="http://www.mozilla.org/" title="download FireFox" target="_blank">FireFox</a> 
+				<a href="http://www.opera.com/" title="download Opera" target="_blank">Opera</a> 
+				<a href="http://www.google.com/chrome" title="download Chrome" target="_blank">Chrome</a>
+			</p>
+		</p> 
+
+ 
+	</div>
+
+</div>
+	<!--SCRIPTS-->
+	<script src="/js/dependencies/sails.io.js"></script>
+	<script src="/js/dependencies/angular.1.3.js"></script>
+	<script src="/js/dependencies/jquery.js"></script>
+	<script src="/js/dependencies/fastclick.js"></script>
+	<script src="/js/dependencies/angular-toastr.js"></script>
+	<script src="/js/dependencies/compareTo.module.js"></script>
+	<script src="/js/dependencies/foundation.min.js"></script>
+	<script src="/js/public/signup/SignupModule.js"></script>
+	<script src="/js/private/dashboard/DashboardModule.js"></script>
+	<script src="/js/public/homepage/HomepageModule.js"></script>
+	<script src="/js/private/classroomlogin/ClassroomLoginModule.js"></script>
+	<script src="/js/private/classroom/ClassroomModule.js"></script>
+	<script src="/js/private/classroom/ClassroomController.js"></script>
+	<script src="/js/private/classroomlogin/ClassroomLoginController.js"></script>
+	<script src="/js/private/dashboard/DashboardController.js"></script>
+	<script src="/js/public/homepage/HomepageController.js"></script>
+	<script src="/js/public/signup/SignupController.js"></script>
+	<!--SCRIPTS END-->
+	<script src="/js/dependencies/modernizr/modernizr.js"></script>
+	<script src="/js/dependencies/classroom/main.js"></script>
+	<script src="/js/dependencies/classroom/sha1.js"></script>
+
+<script>
+
+ 
+var button_wrap = get('button_wrap'), 
+	browser_note = get('browser_note'), 
+	version_note = get('version_note'), 
+	login_button = get('login_button'), 
+	login_button1 = get('login_button1');
+var browser = browserInfo();
+
+// is Browser Chrome or FireFox?
+if(browser.valid_browser) {
+	login_wrap.style.display = 'block';
+	browser_note.style.display = 'none';
+	version_note.style.display = (browser.valid_version) ? 'none': 'block';  
+}
+else {
+	login_wrap.style.display = 'none';
+	browser_note.style.display = 'block';
+}
+
+login_button.addEventListener('click', function() {
+	var position = document.getElementsByName('position');
+	var pref =   'whiteboard'; 
+  
+	if(get('room_name').value.length < 6) {
+		get('room_name').focus();
+		alert('Please fill in a room name with at least 6 characters');
+		return false;
+	}
+	else if(position[0].checked == false && position[1].checked == false) {
+		alert('Please select Teacher or Student');
+		return false;
+	}
+	else {
+		if(position[0].checked) {
+			document.location =  pref + '/#teacher_' + Sha1.hash(get('room_name').value);
+		}
+		else if(position[1].checked) {
+			document.location = pref + '/#student_' + Sha1.hash(get('room_name').value);
+		}
+	}
+});
+
+
+
+
+</script>
+ 
+</body>
+</html>

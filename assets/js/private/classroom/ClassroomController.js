@@ -1,0 +1,1 @@
+angular.module('ClassroomModule').controller('ClassroomController', [ function(){}]);

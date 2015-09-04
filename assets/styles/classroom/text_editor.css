@@ -1,0 +1,67 @@
+
+#pr2_text_editor {
+    z-index: 100;
+    width: 200px;
+    margin: 0;
+    position: absolute;
+    display: none;
+    padding: 2px;
+    resize:none;
+    overflow: hidden;
+    border: solid transparent 1px;
+    background-color: transparent;
+    outline: none;
+}
+
+
+
+.hide-selection::selection {
+    background: red;
+}
+
+.hide-selection::-moz-selection {
+    background: transparent;
+}
+
+
+#pr2_text_editor_wrapper {
+    position: absolute;
+    border: solid #3399FF 1px;
+    z-index: 111;
+    outline: none;
+    pointer-events: none;
+}
+
+
+#pr2_text_editor_wrapper>div[id^=pr2_text_editor_handle] {
+    height: 5px;
+    position: absolute;
+    width: 5px;
+    z-index: 110;
+    background-color: #3399FF;
+    pointer-events: auto;
+}
+
+#pr2_text_editor_handle_nw {
+    cursor: nw-resize;
+    left: 0;
+    top: 0;
+}
+
+#pr2_text_editor_handle_ne {
+    cursor: ne-resize;
+    right: 0;
+    top: 0;
+}
+
+#pr2_text_editor_handle_sw {
+    cursor: sw-resize;
+    left: 0;
+    bottom: 0;
+}
+
+#pr2_text_editor_handle_se {
+    cursor: se-resize;
+    right: 0;
+    bottom: 0;
+}

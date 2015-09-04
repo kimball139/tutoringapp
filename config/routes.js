@@ -36,6 +36,8 @@ module.exports.routes = {
   //  view: 'homepage'
   //}
   'GET /signup': {view: 'signup'},
+  'GET /tutor_signin': 'PageController.showClassroomLogin',
+  'GET /whiteboard': 'PageController.showClassroom',
   'GET /': 'PageController.showHomePage',
 
   ////////////////////////////////////////////////////////////

@@ -1,0 +1,120 @@
+
+#pr2_chat_container {
+    position:fixed;
+    padding: 0;
+    margin: 0;
+    top: 39px;
+    height:299px;
+    right: 2px;
+    z-index: 500;
+    background-color: #eaffea;
+}
+
+#pr2_chat_conversation {
+    border: solid #93BC3D 1px;
+    width: calc(100% - 12px);
+    height:250px;
+    background-color: white;
+    overflow-y: auto;
+    padding: 3px;
+    margin: 3px 3px 0 3px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#pr2_chat_conversation>div>span:last-child {
+    display: inline-block;
+    width: calc(100% - 58px);
+    padding-left: 2px;
+}
+
+#pr2_chat_conversation>div>span:first-child {
+    display:inline-block;
+    width: 50px;
+    vertical-align: top;
+    overflow:hidden;
+}
+
+#pr2_chat_input {
+    border: solid #93BC3D 1px;
+    margin: 3px;
+    padding: 2px;
+    font-size: 12px;
+    resize: none;
+    height: 26px;
+    width: 97%;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+#pr2_chat_leftbox {
+    width: calc(100%  - 46px);
+    display: inline-block;
+}
+
+#pr2_chat_rightbox {
+    display: inline-block;
+    width: 46px;
+    vertical-align: top;
+    padding-top: 3px;
+}
+
+#pr2_chat_conversation a {
+    color: #375B28;
+}
+
+#pr2_chat_conversation a:hover {
+    font-style: italic;
+}
+
+#pr2_chat_input:disabled {
+    background-color: white;
+}
+
+.pr2_chat_other {
+    color: green
+}
+
+#pr2_chat_container  > span {
+    display: inline-block;
+    width: 20px;
+}
+
+.pr2_chat_container_button {
+    border: solid #93BC3D 1px;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 3px 0 0 ;
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: url('/whiteboard/icons/pr2_sprite.png'), linear-gradient(to bottom, #cdeb8e 0%, #a5c956 100%) !important;
+
+}
+
+.pr2_chat_container_disabled {
+    opacity: 0.5;
+    border: solid transparent 1px;
+    cursor: default;
+}
+.pr2_chat_container_disabled:hover {
+    opacity: 0.5;
+    border: solid transparent 1px;
+}
+.pr2_chat_container_disabled:active {
+    opacity: 0.5;
+    border: solid transparent 1px;
+}
+
+
+#pr2_chat_container button::-moz-focus-inner {
+    border:0; padding:0
+}
+#pr2_chat_send_button{
+    background-position: -478px 0px;
+}
+
+#pr2_file_send_button {
+    background-position:-89px -30px, 0 0 ;
+
+}
